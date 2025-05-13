@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人体生物节律计算器</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.melectron/npm/chartjs-plugin-annotation"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        
+        <div class="input-result-container">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="birthday">出生日期：</label>
+                    <input type="date" id="birthday" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="queryDate">查询日期：</label>
+                    <input type="date" id="queryDate" required>
+                </div>
+
+              
+                <button type="button" id="calculateBtn">计算</button>
+                </div>
+            <div class="result-section">
+                <div id="results">
+                    <p>体力值: <span id="physicalValue">-</span></p>
+                    <p>情绪值: <span id="emotionalValue">-</span></p>
+                    <p>智力值: <span id="intellectualValue">-</span></p>
+                    <p>体力值最高的日期：<span id="maxPhysicalDate"></span></p>
+                    <p>情绪值最高的日期：<span id="maxEmotionalDate"></span></p>
+                    <p>智力值最高的日期：<span id="maxIntellectualDate"></span></p>
+                </div>
+            </div>
+        </div>
+            
+            <div class="chart-container">
+                <canvas id="biorhythmChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
